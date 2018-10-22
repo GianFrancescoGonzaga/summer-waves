@@ -1,0 +1,557 @@
+<!-- 
+
+    Sorry for the messy code hehe :)
+
+ -->
+
+<!-- 
+
+    List of frameworks that I've used in this project:
+    Supersized (jQuery Plugin)
+    jQuery Isotope
+    jQuery Fancybox
+    jQuery
+    Bootstrap
+    modernizr.js
+    placeholder.js
+    waypoints.js
+
+  -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Summer Waves in Dapitan City</title>
+
+    <meta name="description" content="Insert Your Site Description" />
+
+    <!-- Mobile Specifics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+
+
+    <!-- Bootstrap -->
+    <link href="_include/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="_include/css/main.css" rel="stylesheet">
+
+    <!-- Supersized -->
+    <link href="_include/css/supersized.css" rel="stylesheet">
+    <link href="_include/css/supersized.shutter.css" rel="stylesheet">
+
+    <!-- FancyBox -->
+    <link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+
+    <!-- Font Icons -->
+    <link href="_include/css/fonts.css" rel="stylesheet">
+
+
+    <!-- Responsive -->
+    <link href="_include/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="_include/css/responsive.css" rel="stylesheet">
+
+    <!-- Supersized -->
+    <link href="_include/css/supersized.css" rel="stylesheet">
+    <link href="_include/css/supersized.shutter.css" rel="stylesheet">
+    <link rel="shortcut icon" href="_include/img/favicon.ico">
+
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+
+    <!-- Modernizr -->
+    <script src="_include/js/modernizr.js"></script>
+
+
+</head>
+
+
+<body>
+
+    <!-- This section is for Splash Screen -->
+    <div class="ole">
+        <section id="jSplash">
+            <div id="circle"></div>
+        </section>
+    </div>
+    <!-- End of Splash Screen -->
+
+    <!-- Homepage Slider -->
+    <div id="home-slider">
+        <div class="overlay"></div>
+
+        <div class="slider-text">
+            <h1 id="newSlideCaption">Summer Waves in Dapitan City</h1>
+        </div>
+
+        <div class="control-nav">
+            <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
+            <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
+            <ul id="slide-list"></ul>
+
+            <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
+        </div>
+    </div>
+    <!-- End Homepage Slider -->
+
+    <!-- Header -->
+    <header>
+        <div class="sticky-nav">
+            <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+
+            <div id="logo">
+                <a id="goUp" href="#home-slider" title="Summer Waves">Summer Waves</a>
+            </div>
+
+            <nav id="menu">
+                <ul id="menu-nav">
+                    <li class="current"><a id="#home" href="#home-slider">Home</a></li>
+                    <li><a id="destinations" href="#work">Destinations</a></li>
+                    <li><a id="aboutp" href="#about">About Us</a></li>
+                    <li><a id="contactp" href="#contact">Contact</a></li>
+                    <li><a href="#" onclick="lightbox_open();">Watch video</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Our Work Section -->
+    <div id="work" class="page">
+        <div class="container">
+            <!-- Title Page -->
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">Indulge in the <a href="#">Beautiful Destinations</a></h2>
+                        <h3 class="title-description">This blog was intentionally created to showcase the beauty of
+                            Dapitan City. Including the four barangays; Napo, Canlucani, Tag-ulo and The Dapitan City
+                            Boulevard.</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- End Title Page -->
+
+            <!-- Portfolio Projects -->
+            <div class="row">
+                <div class="span3">
+                    <!-- Filter -->
+                    <nav id="options" class="work-nav">
+                        <ul id="filters" class="option-set" data-option-key="filter">
+                            <li class="type-work">Type</li>
+                            <li><a href="#filter" data-option-value="*" class="selected">All Destinations</a></li>
+                            <li><a href="#filter" data-option-value=".napo">Napo</a></li>
+                            <li><a href="#filter" data-option-value=".tagulo">Tag-ulo</a></li>
+                            <li><a href="#filter" data-option-value=".canlucani">Canlucani</a></li>
+                            <li><a href="#filter" data-option-value=".boulevard">Boulevard</a></li>
+                        </ul>
+                    </nav>
+                    <!-- End Filter -->
+                </div>
+                <style>
+                    .img-resize {
+        width: 400px;
+        height: 300px;;
+    }
+</style>
+                <div class="span9">
+                    <div class="row">
+                        <section id="projects">
+                            <ul id="thumbs">
+
+                                <!-- Item Project and Filter Name -->
+                                <li class="item-thumbs span4 napo">
+                                    <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Napo" href="_include/img/work/full/napo.jpg">
+                                        <span class="overlay-img"></span>
+                                        <span class="overlay-img-thumb font-icon-plus"></span>
+                                    </a>
+                                    <!-- Thumb Image and Description -->
+                                    <img src="_include/img/work/thumbs/napo-thumb.jpg" class="img-resize" alt="It's good to have a long weekend, there's another place to discover here in Dapitan City. It is located in Barangay Napo, Dapitan City. For almost 30 minutes from the proper city of Dapitanm you will reach a white sand beach with a beautiful scenery.">
+                                </li>
+                                <!-- End Item Project -->
+
+                                <!-- Item Project and Filter Name -->
+                                <li class="item-thumbs span4 tagulo">
+                                    <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Tag-ulo" href="_include/img/work/full/tagulo.jpg">
+                                        <span class="overlay-img"></span>
+                                        <span class="overlay-img-thumb font-icon-plus"></span>
+                                    </a>
+                                    <!-- Thumb Image and Description -->
+                                    <img src="_include/img/work/thumbs/tagulo.jpg" class="img-resize" alt="Less than an hour ride from Dapitan City, a few kilometers ahead of Dakak Beach Park Resort, is an undeveloped spread of pearl, sand beach. You can stay to chill in. Tag-ulo, Dapitan City, is a small town of beaches you can tire yourself from.
+                                    ">
+                                </li>
+                                <!-- End Item Project -->
+
+                                <!-- Item Project and Filter Name -->
+                                <li class="item-thumbs span4 canlucani">
+                                    <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Canlucani" href="_include/img/work/full/canlucani.jpg">
+                                        <span class="overlay-img"></span>
+                                        <span class="overlay-img-thumb font-icon-plus"></span>
+                                    </a>
+                                    <!-- Thumb Image and Description -->
+                                    <img src="_include/img/work/thumbs/canlucani.jpg" class="img-resize" alt="Canlucani is a city-barangay and the beach that we went to is just near the Dakak Resort. Gladly, there's no entrance fee. A steep way going down to the beach welcomes us but it's not that difficult anyway.">
+                                </li>
+                                <!-- End Item Project -->
+
+                                <!-- Item Project and Filter Name -->
+                                <li class="item-thumbs span4 boulevard">
+                                    <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                    <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Dapitan City Boulevard"
+                                        href="_include/img/work/full/boulevard.jpg">
+                                        <span class="overlay-img"></span>
+                                        <span class="overlay-img-thumb font-icon-plus"></span>
+                                    </a>
+                                    <!-- Thumb Image and Description -->
+                                    <img src="_include/img/work/thumbs/boulevard.jpg" style="width:500px;height:300px;"
+                                        alt="Long weekend plus low cost budget of adventure is exactly what you need. Here you can enjoy walking with the beautiful fine sand and enjoy watching the sunset located at 0432 Sunset Boulevard, Dawo, Dapitan City.">
+                                </li>
+                                <!-- End Item Project -->
+
+
+                            </ul>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Destinations -->
+        </div>
+    </div>
+
+    <style>
+        .vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+#light {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  max-width: 600px;
+  max-height: 360px;
+  margin-left: -300px;
+  margin-top: -180px;
+  /* border: 2px solid #FFF; */
+  background: #FFF;
+  z-index: 1002;
+  overflow: visible;
+}
+
+#boxclose {
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  /* border: 1px solid #AEAEAE; */
+  border-radius: 3px;
+  background: #222222;
+  font-size: 31px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 0px;
+  padding: 11px 3px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  z-index: 1002;
+  opacity: 0.9;
+}
+
+.boxclose:before {
+  content: "×";
+}
+
+#fade:hover ~ #boxclose {
+  display:none;
+}
+
+
+    </style>
+
+    <div class="container sd">
+        <!-- End Our Work Section -->
+        <!-- Start Buttons/Video Responsive Section -->
+        <div class="row">
+
+            <!-- End Buttons -->
+
+            <!-- Start Video -->
+            <div class="span12">
+                <div id="light">
+                    <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+                    <video width="600" controls id="VisaChipCardVideo">
+                        <source src="newvid.mp4" type="video/mp4">
+                        <!--Browser does not support <video> tag -->
+                    </video>
+                </div>
+
+            </div>
+            <!-- End Video -->
+
+        </div>
+        <div id="fade" onClick="lightbox_close();"></div>
+        <!-- End Buttons/Video Responsive Section -->
+
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="page-alternate">
+        <div class="container">
+            <!-- Title Page -->
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">About Us</h2>
+                        <h3 class="title-description">Get to know what we are about.</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- End Title Page -->
+
+            <!-- People -->
+            <div class="row">
+
+                <!-- Start Profile -->
+                <div class="span6 profile">
+                    <div class="image-wrap">
+                        <div class="hover-wrap">
+                            <span class="overlay-img"></span>
+                            <span class="overlay-text-thumb">
+                                <ul class="list">
+                                    <li>Age: 16</li>
+                                    <li>DMC College Foundation</li>
+                                    <li>09507678934</li>
+                                </ul>
+                            </span>
+                        </div>
+                        <img src="_include/img/profile/profile-01.jpg" alt="Dexter P. Sanico">
+                    </div>
+                    <h3 class="profile-name">Dexter P. Sanico</h3>
+                    <p class="profile-desscription">
+
+                    </p>
+
+                    <div class="social">
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="font-icon-social-facebook"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Profile -->
+
+                <!-- Start Profile -->
+                <div class="span6 profile">
+                    <div class="image-wrap">
+                        <div class="hover-wrap">
+                            <span class="overlay-img"></span>
+                            <span class="overlay-text-thumb">
+                                <ul class="list">
+                                    <li>Age: 17</li>
+                                    <li>DMC College Foundation</li>
+                                    <li>09076342665</li>
+                                </ul>
+                            </span>
+                        </div>
+                        <img src="_include/img/profile/profile-02.jpg" alt="Art ">
+                    </div>
+                    <h3 class="profile-name">Art Mhoneer M. Unsang</h3>
+                    <div class="social">
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Profile -->
+
+
+            </div>
+            <!-- End People -->
+        </div>
+    </div>
+    <!-- End About Section -->
+
+
+    <!-- Contact Section -->
+    <div id="contact" class="page">
+        <div class="container">
+            <!-- Title Page -->
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">Get in Touch</h2>
+                        <h3 class="title-description">Contact us! We highly appreciate your reviews and feedbacks.</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- End Title Page -->
+
+            <!-- Contact Form -->
+            <div class="row">
+                <div class="span9">
+
+                    <form id="contact-form" class="contact-form" action="#">
+                        <p class="contact-name">
+                            <input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
+                        </p>
+                        <p class="contact-email">
+                            <input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
+                        </p>
+                        <p class="contact-message">
+                            <textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
+                        </p>
+                        <p class="contact-submit">
+                            <a id="contact-submit" class="submit" href="#">Send Your Email</a>
+                        </p>
+
+                        <div id="response">
+
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="span3">
+                    <div class="contact-details">
+                        <h3>Contact Details</h3>
+                        <ul>
+                            <li><a href="#">dextersanico18@gmail.com</a></li>
+                            <li>090763426655</li>
+                            <li>
+                                Dexter Sanico
+                                <br>
+                                DMC College Foundation
+                                <br>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Contact Form -->
+        </div>
+    </div>
+    <!-- End Contact Section -->
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p class="credits">&copy;2018 DMC College Foundation. Dexter Sanico </p>
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Back To Top -->
+    <a id="back-to-top" href="#">
+        <i class="font-icon-arrow-simple-up"></i>
+    </a>
+    <!-- End Back to Top -->
+
+
+    <!-- Js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+    <script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
+    <script src="_include/js/supersized.3.2.7.min.js"></script> <!-- Slider -->
+    <script src="_include/js/waypoints.js"></script> <!-- WayPoints -->
+    <script src="_include/js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
+    <script src="_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
+    <script src="_include/js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
+    <script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+    <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
+    <script src="_include/js/plugins.js"></script>
+    <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+    <script src="_include/js/main.js"></script> <!-- Default JS -->
+    <script>
+        window.document.onkeydown = function (e) {
+            if (!e) {
+                e = event;
+            }
+            if (e.keyCode == 27) {
+                lightbox_close();
+            }
+        }
+
+        function lightbox_open() {
+            let lightBoxVideo = document.getElementById("VisaChipCardVideo");
+            window.scrollTo(0, 0);
+            document.getElementById('light').style.display = 'block';
+            document.getElementById('fade').style.display = 'block';
+            lightBoxVideo.play();
+        }
+
+        function lightbox_close() {
+            let lightBoxVideo = document.getElementById("VisaChipCardVideo");
+            document.getElementById('light').style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+            lightBoxVideo.stop();
+        }
+        
+        $("#fade").click(() => {
+            //  .stop()
+        })
+
+        // Scroll to div
+
+        $("#home").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#home-slider").offset().top
+            }, 1500);
+        });
+
+        
+        $("#destinations").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#work").offset().top
+            }, 1500);
+        });
+
+        
+        $("#aboutp").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#about").offset().top
+            }, 1500);
+        });
+
+        
+        $("#contactp").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#contact").offset().top
+            }, 1500);
+        });
+    </script>
+    <!-- End Js -->
+
+</body>
+
+</html>
